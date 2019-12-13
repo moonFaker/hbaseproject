@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true" scanPeriod="60 seconds" debug="true">//如果debug为true表示项目启动时会检索logback相关的启动信息
+    <appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">//表示输出到控制台
+        <Target>System.out</Target>
+        <encoder>
+            <pattern>%highlight(%-5level) %d{HH:mm:ss.SSS} %m %n</pattern>
+        </encoder>
+    </appender>
+
+    <!--保存出错的信息-->
+    <!--    <appender name="SQL" class="ch.qos.logback.core.FileAppender">-->//把日志文件输出到指定目录下，保存为文件
+    <!--        <file>sql.log</file>-->
+    <!--        <append>true</append>-->
+    <!--        <immediateFlush>true</immediateFlush>-->
+    <!--        <encoder>-->
+    <!--            <pattern>%d{HH:mm:ss.SSS} %m %n</pattern>-->
+    <!--        </encoder>-->
+    <!--    </appender>-->
+
+    <logger name="cn.schoolwow.quickdao" level="DEBUG" additivity="false">//日志过滤器，name表示需要过滤的包 level表示过滤级别 trace info debug error all 等等，不区分大小写
+        <appender-ref ref="stdout" />
+    </logger>
+
+    <logger name="top.redheart.logback.logbacktest" level="info" additivity="false">
+        <appender-ref ref="stdout"></appender-ref>
+    </logger>
+
+    <root level="debug">
+        <appender-ref ref="stdout" />
+    </root>
+</configuration>

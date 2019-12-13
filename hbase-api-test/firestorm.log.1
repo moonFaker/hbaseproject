@@ -1,0 +1,784 @@
+DEBUG main org.apache.hadoop.security.Groups -  Creating new Groups object
+DEBUG main org.apache.hadoop.util.NativeCodeLoader - Trying to load the custom-built native-hadoop library...
+DEBUG main org.apache.hadoop.util.NativeCodeLoader - Failed to load native-hadoop with error: java.lang.UnsatisfiedLinkError: no hadoop in java.library.path
+DEBUG main org.apache.hadoop.util.NativeCodeLoader - java.library.path=D:\Java\jdk1.8.0_112\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;.;D:\oracle\oracle\product\11.2.0\dbhome_1\BIN;D:\Java\jdk1.8.0_112\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;%CATALINA_HOME%\lib;%CATALINA_HOME%\bin;D:\mysql-5.5.59-winx64\mysql-5.5.59-winx64\BIN;E:\TortoiseSVN\bin;D:\apache-maven-3.2.5\bin;E:\Git\cmd;.
+WARN main org.apache.hadoop.util.NativeCodeLoader - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+DEBUG main org.apache.hadoop.security.JniBasedUnixGroupsMappingWithFallback - Falling back to shell based
+DEBUG main org.apache.hadoop.security.JniBasedUnixGroupsMappingWithFallback - Group mapping impl=org.apache.hadoop.security.ShellBasedUnixGroupsMapping
+DEBUG main org.apache.hadoop.util.Shell - Failed to detect a valid hadoop home directory
+java.io.IOException: HADOOP_HOME or hadoop.home.dir are not set.
+	at org.apache.hadoop.util.Shell.checkHadoopHome(Shell.java:302)
+	at org.apache.hadoop.util.Shell.<clinit>(Shell.java:327)
+	at org.apache.hadoop.util.StringUtils.<clinit>(StringUtils.java:78)
+	at org.apache.hadoop.security.Groups.parseStaticMapping(Groups.java:93)
+	at org.apache.hadoop.security.Groups.<init>(Groups.java:77)
+	at org.apache.hadoop.security.Groups.getUserToGroupsMappingService(Groups.java:240)
+	at org.apache.hadoop.security.Groups.getUserToGroupsMappingService(Groups.java:225)
+	at org.apache.hadoop.hbase.security.UserProvider.<clinit>(UserProvider.java:56)
+	at org.apache.hadoop.hbase.client.ConnectionFactory.createConnection(ConnectionFactory.java:214)
+	at org.apache.hadoop.hbase.client.ConnectionFactory.createConnection(ConnectionFactory.java:119)
+	at com.hbase.api.HBaseConn.getConnection(HBaseConn.java:34)
+	at com.hbase.api.HBaseConn.getHbaseConn(HBaseConn.java:43)
+	at com.hbase.api.HBaseUtil.createTable(HBaseUtil.java:35)
+	at HBaseUtilTest.createTable(HBaseUtilTest.java:23)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
+ERROR main org.apache.hadoop.util.Shell - Failed to locate the winutils binary in the hadoop binary path
+java.io.IOException: Could not locate executable null\bin\winutils.exe in the Hadoop binaries.
+	at org.apache.hadoop.util.Shell.getQualifiedBinPath(Shell.java:355)
+	at org.apache.hadoop.util.Shell.getWinUtilsPath(Shell.java:370)
+	at org.apache.hadoop.util.Shell.<clinit>(Shell.java:363)
+	at org.apache.hadoop.util.StringUtils.<clinit>(StringUtils.java:78)
+	at org.apache.hadoop.security.Groups.parseStaticMapping(Groups.java:93)
+	at org.apache.hadoop.security.Groups.<init>(Groups.java:77)
+	at org.apache.hadoop.security.Groups.getUserToGroupsMappingService(Groups.java:240)
+	at org.apache.hadoop.security.Groups.getUserToGroupsMappingService(Groups.java:225)
+	at org.apache.hadoop.hbase.security.UserProvider.<clinit>(UserProvider.java:56)
+	at org.apache.hadoop.hbase.client.ConnectionFactory.createConnection(ConnectionFactory.java:214)
+	at org.apache.hadoop.hbase.client.ConnectionFactory.createConnection(ConnectionFactory.java:119)
+	at com.hbase.api.HBaseConn.getConnection(HBaseConn.java:34)
+	at com.hbase.api.HBaseConn.getHbaseConn(HBaseConn.java:43)
+	at com.hbase.api.HBaseUtil.createTable(HBaseUtil.java:35)
+	at HBaseUtilTest.createTable(HBaseUtilTest.java:23)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
+DEBUG main org.apache.hadoop.security.Groups - Group mapping impl=org.apache.hadoop.security.JniBasedUnixGroupsMappingWithFallback; cacheTimeout=300000; warningDeltaMs=5000
+DEBUG main org.apache.hadoop.metrics2.lib.MutableMetricsFactory - field org.apache.hadoop.metrics2.lib.MutableRate org.apache.hadoop.security.UserGroupInformation$UgiMetrics.loginSuccess with annotation @org.apache.hadoop.metrics2.annotation.Metric(about=, always=false, sampleName=Ops, type=DEFAULT, value=[Rate of successful kerberos logins and latency (milliseconds)], valueName=Time)
+DEBUG main org.apache.hadoop.metrics2.lib.MutableMetricsFactory - field org.apache.hadoop.metrics2.lib.MutableRate org.apache.hadoop.security.UserGroupInformation$UgiMetrics.loginFailure with annotation @org.apache.hadoop.metrics2.annotation.Metric(about=, always=false, sampleName=Ops, type=DEFAULT, value=[Rate of failed kerberos logins and latency (milliseconds)], valueName=Time)
+DEBUG main org.apache.hadoop.metrics2.lib.MutableMetricsFactory - field org.apache.hadoop.metrics2.lib.MutableRate org.apache.hadoop.security.UserGroupInformation$UgiMetrics.getGroups with annotation @org.apache.hadoop.metrics2.annotation.Metric(about=, always=false, sampleName=Ops, type=DEFAULT, value=[GetGroups], valueName=Time)
+DEBUG main org.apache.hadoop.metrics2.impl.MetricsSystemImpl - UgiMetrics, User and group related metrics
+DEBUG main org.apache.hadoop.security.authentication.util.KerberosName - Kerberos krb5 configuration not found, setting default realm to empty
+DEBUG main org.apache.hadoop.security.UserGroupInformation - hadoop login
+DEBUG main org.apache.hadoop.security.UserGroupInformation - hadoop login commit
+DEBUG main org.apache.hadoop.security.UserGroupInformation - using local user:NTUserPrincipal: Administrator
+DEBUG main org.apache.hadoop.security.UserGroupInformation - UGI loginUser:Administrator (auth:SIMPLE)
+INFO main org.apache.hadoop.hbase.zookeeper.RecoverableZooKeeper - Process identifier=hconnection-0x1c72da34 connecting to ZooKeeper ensemble=47.110.76.197:2181
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:host.name=PC201702131144
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:java.version=1.8.0_112
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:java.vendor=Oracle Corporation
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:java.home=D:\Java\jdk1.8.0_112\jre
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:java.class.path=E:\idea\lib\idea_rt.jar;E:\idea\plugins\junit\lib\junit-rt.jar;E:\idea\plugins\junit\lib\junit5-rt.jar;D:\Java\jdk1.8.0_112\jre\lib\charsets.jar;D:\Java\jdk1.8.0_112\jre\lib\deploy.jar;D:\Java\jdk1.8.0_112\jre\lib\ext\access-bridge-64.jar;D:\Java\jdk1.8.0_112\jre\lib\ext\cldrdata.jar;D:\Java\jdk1.8.0_112\jre\lib\ext\dnsns.jar;D:\Java\jdk1.8.0_112\jre\lib\ext\jaccess.jar;D:\Java\jdk1.8.0_112\jre\lib\ext\jfxrt.jar;D:\Java\jdk1.8.0_112\jre\lib\ext\localedata.jar;D:\Java\jdk1.8.0_112\jre\lib\ext\nashorn.jar;D:\Java\jdk1.8.0_112\jre\lib\ext\sunec.jar;D:\Java\jdk1.8.0_112\jre\lib\ext\sunjce_provider.jar;D:\Java\jdk1.8.0_112\jre\lib\ext\sunmscapi.jar;D:\Java\jdk1.8.0_112\jre\lib\ext\sunpkcs11.jar;D:\Java\jdk1.8.0_112\jre\lib\ext\zipfs.jar;D:\Java\jdk1.8.0_112\jre\lib\javaws.jar;D:\Java\jdk1.8.0_112\jre\lib\jce.jar;D:\Java\jdk1.8.0_112\jre\lib\jfr.jar;D:\Java\jdk1.8.0_112\jre\lib\jfxswt.jar;D:\Java\jdk1.8.0_112\jre\lib\jsse.jar;D:\Java\jdk1.8.0_112\jre\lib\management-agent.jar;D:\Java\jdk1.8.0_112\jre\lib\plugin.jar;D:\Java\jdk1.8.0_112\jre\lib\resources.jar;D:\Java\jdk1.8.0_112\jre\lib\rt.jar;E:\projectplace\hbaseproject\hbase-api-test\target\test-classes;E:\projectplace\hbaseproject\hbase-api-test\target\classes;D:\repository\repository\org\apache\hbase\hbase-client\1.2.4\hbase-client-1.2.4.jar;D:\repository\repository\org\apache\hbase\hbase-annotations\1.2.4\hbase-annotations-1.2.4.jar;D:\repository\repository\com\github\stephenc\findbugs\findbugs-annotations\1.3.9-1\findbugs-annotations-1.3.9-1.jar;D:\repository\repository\log4j\log4j\1.2.17\log4j-1.2.17.jar;D:\repository\repository\org\apache\hbase\hbase-common\1.2.4\hbase-common-1.2.4.jar;D:\repository\repository\commons-collections\commons-collections\3.2.2\commons-collections-3.2.2.jar;D:\repository\repository\org\mortbay\jetty\jetty-util\6.1.26\jetty-util-6.1.26.jar;D:\repository\repository\org\apache\hbase\hbase-protocol\1.2.4\hbase-protocol-1.2.4.jar;D:\repository\repository\commons-codec\commons-codec\1.9\commons-codec-1.9.jar;D:\repository\repository\commons-io\commons-io\2.4\commons-io-2.4.jar;D:\repository\repository\commons-lang\commons-lang\2.6\commons-lang-2.6.jar;D:\repository\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;D:\repository\repository\com\google\guava\guava\12.0.1\guava-12.0.1.jar;D:\repository\repository\com\google\protobuf\protobuf-java\2.5.0\protobuf-java-2.5.0.jar;D:\repository\repository\io\netty\netty-all\4.0.23.Final\netty-all-4.0.23.Final.jar;D:\repository\repository\org\apache\zookeeper\zookeeper\3.4.6\zookeeper-3.4.6.jar;D:\repository\repository\org\slf4j\slf4j-log4j12\1.6.1\slf4j-log4j12-1.6.1.jar;D:\repository\repository\org\apache\htrace\htrace-core\3.1.0-incubating\htrace-core-3.1.0-incubating.jar;D:\repository\repository\org\codehaus\jackson\jackson-mapper-asl\1.9.13\jackson-mapper-asl-1.9.13.jar;D:\repository\repository\org\codehaus\jackson\jackson-core-asl\1.9.13\jackson-core-asl-1.9.13.jar;D:\repository\repository\org\jruby\jcodings\jcodings\1.0.8\jcodings-1.0.8.jar;D:\repository\repository\org\jruby\joni\joni\2.1.2\joni-2.1.2.jar;D:\repository\repository\com\yammer\metrics\metrics-core\2.2.0\metrics-core-2.2.0.jar;D:\repository\repository\org\apache\hadoop\hadoop-auth\2.5.1\hadoop-auth-2.5.1.jar;D:\repository\repository\org\apache\httpcomponents\httpclient\4.2.5\httpclient-4.2.5.jar;D:\repository\repository\org\apache\httpcomponents\httpcore\4.2.4\httpcore-4.2.4.jar;D:\repository\repository\org\apache\directory\server\apacheds-kerberos-codec\2.0.0-M15\apacheds-kerberos-codec-2.0.0-M15.jar;D:\repository\repository\org\apache\directory\server\apacheds-i18n\2.0.0-M15\apacheds-i18n-2.0.0-M15.jar;D:\repository\repository\org\apache\directory\api\api-asn1-api\1.0.0-M20\api-asn1-api-1.0.0-M20.jar;D:\repository\repository\org\apache\directory\api\api-util\1.0.0-M20\api-util-1.0.0-M20.jar;D:\repository\repository\org\apache\hadoop\hadoop-common\2.5.1\hadoop-common-2.5.1.jar;D:\repository\repository\org\apache\hadoop\hadoop-annotations\2.5.1\hadoop-annotations-2.5.1.jar;D:\Java\jdk1.8.0_112\lib\tools.jar;D:\repository\repository\commons-cli\commons-cli\1.2\commons-cli-1.2.jar;D:\repository\repository\org\apache\commons\commons-math3\3.1.1\commons-math3-3.1.1.jar;D:\repository\repository\xmlenc\xmlenc\0.52\xmlenc-0.52.jar;D:\repository\repository\commons-httpclient\commons-httpclient\3.1\commons-httpclient-3.1.jar;D:\repository\repository\commons-net\commons-net\3.1\commons-net-3.1.jar;D:\repository\repository\commons-el\commons-el\1.0\commons-el-1.0.jar;D:\repository\repository\commons-configuration\commons-configuration\1.6\commons-configuration-1.6.jar;D:\repository\repository\commons-digester\commons-digester\1.8\commons-digester-1.8.jar;D:\repository\repository\commons-beanutils\commons-beanutils\1.7.0\commons-beanutils-1.7.0.jar;D:\repository\repository\commons-beanutils\commons-beanutils-core\1.8.0\commons-beanutils-core-1.8.0.jar;D:\repository\repository\org\apache\avro\avro\1.7.4\avro-1.7.4.jar;D:\repository\repository\com\thoughtworks\paranamer\paranamer\2.3\paranamer-2.3.jar;D:\repository\repository\org\xerial\snappy\snappy-java\1.0.4.1\snappy-java-1.0.4.1.jar;D:\repository\repository\com\jcraft\jsch\0.1.42\jsch-0.1.42.jar;D:\repository\repository\com\google\code\findbugs\jsr305\1.3.9\jsr305-1.3.9.jar;D:\repository\repository\org\apache\commons\commons-compress\1.4.1\commons-compress-1.4.1.jar;D:\repository\repository\org\tukaani\xz\1.0\xz-1.0.jar;D:\repository\repository\org\apache\hadoop\hadoop-mapreduce-client-core\2.5.1\hadoop-mapreduce-client-core-2.5.1.jar;D:\repository\repository\org\apache\hadoop\hadoop-yarn-common\2.5.1\hadoop-yarn-common-2.5.1.jar;D:\repository\repository\org\apache\hadoop\hadoop-yarn-api\2.5.1\hadoop-yarn-api-2.5.1.jar;D:\repository\repository\javax\xml\bind\jaxb-api\2.2.2\jaxb-api-2.2.2.jar;D:\repository\repository\javax\xml\stream\stax-api\1.0-2\stax-api-1.0-2.jar;D:\repository\repository\javax\activation\activation\1.1\activation-1.1.jar;D:\repository\repository\io\netty\netty\3.6.2.Final\netty-3.6.2.Final.jar;D:\repository\repository\junit\junit\4.12\junit-4.12.jar;D:\repository\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;D:\repository\repository\ch\qos\logback\logback-classic\1.2.3\logback-classic-1.2.3.jar;D:\repository\repository\ch\qos\logback\logback-core\1.2.3\logback-core-1.2.3.jar;D:\repository\repository\org\slf4j\slf4j-api\1.7.25\slf4j-api-1.7.25.jar;E:\idea\lib\idea_rt.jar
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:java.library.path=D:\Java\jdk1.8.0_112\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;.;D:\oracle\oracle\product\11.2.0\dbhome_1\BIN;D:\Java\jdk1.8.0_112\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;%CATALINA_HOME%\lib;%CATALINA_HOME%\bin;D:\mysql-5.5.59-winx64\mysql-5.5.59-winx64\BIN;E:\TortoiseSVN\bin;D:\apache-maven-3.2.5\bin;E:\Git\cmd;.
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:java.io.tmpdir=C:\Users\ADMINI~1\AppData\Local\Temp\
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:java.compiler=<NA>
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:os.name=Windows 7
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:os.arch=amd64
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:os.version=6.1
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:user.name=Administrator
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:user.home=C:\Users\Administrator
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:user.dir=E:\projectplace\hbaseproject\hbase-api-test
+INFO main org.apache.zookeeper.ZooKeeper - Initiating client connection, connectString=47.110.76.197:2181 sessionTimeout=90000 watcher=hconnection-0x1c72da340x0, quorum=47.110.76.197:2181, baseZNode=/hbase
+DEBUG main org.apache.zookeeper.ClientCnxn - zookeeper.disableAutoWatchReset is false
+INFO main-SendThread(47.110.76.197:2181) org.apache.zookeeper.ClientCnxn - Opening socket connection to server 47.110.76.197/47.110.76.197:2181. Will not attempt to authenticate using SASL (unknown error)
+INFO main-SendThread(47.110.76.197:2181) org.apache.zookeeper.ClientCnxn - Socket connection established to 47.110.76.197/47.110.76.197:2181, initiating session
+DEBUG main-SendThread(47.110.76.197:2181) org.apache.zookeeper.ClientCnxn - Session establishment request sent on 47.110.76.197/47.110.76.197:2181
+INFO main-SendThread(47.110.76.197:2181) org.apache.zookeeper.ClientCnxn - Session establishment complete on server 47.110.76.197/47.110.76.197:2181, sessionid = 0x16ed6f75af80015, negotiated timeout = 90000
+DEBUG main-EventThread org.apache.hadoop.hbase.zookeeper.ZooKeeperWatcher - hconnection-0x1c72da340x0, quorum=47.110.76.197:2181, baseZNode=/hbase Received ZooKeeper Event, type=None, state=SyncConnected, path=null
+DEBUG main-EventThread org.apache.hadoop.hbase.zookeeper.ZooKeeperWatcher - hconnection-0x1c72da34-0x16ed6f75af80015 connected
+DEBUG main-SendThread(47.110.76.197:2181) org.apache.zookeeper.ClientCnxn - Reading reply sessionid:0x16ed6f75af80015, packet:: clientPath:null serverPath:null finished:false header:: 1,3  replyHeader:: 1,857,0  request:: '/hbase/hbaseid,F  response:: s{17,748,1575534640778,1575564569893,8,0,0,0,67,0,17} 
+DEBUG main-SendThread(47.110.76.197:2181) org.apache.zookeeper.ClientCnxn - Reading reply sessionid:0x16ed6f75af80015, packet:: clientPath:null serverPath:null finished:false header:: 2,4  replyHeader:: 2,857,0  request:: '/hbase/hbaseid,F  response:: #ffffffff000146d61737465723a313630303024ffffffc6ffffff93ffffffe77effffffabffffffb76850425546a2464386137373934342d613031392d346435302d613735372d626538343932303262383362,s{17,748,1575534640778,1575564569893,8,0,0,0,67,0,17} 
+DEBUG main org.apache.hadoop.hbase.ipc.AbstractRpcClient - Codec=org.apache.hadoop.hbase.codec.KeyValueCodec@4fb0f2b9, compressor=null, tcpKeepAlive=true, tcpNoDelay=true, connectTO=10000, readTO=20000, writeTO=60000, minIdleTimeBeforeClose=120000, maxRetries=0, fallbackAllowed=false, bind address=null
+DEBUG main-SendThread(47.110.76.197:2181) org.apache.zookeeper.ClientCnxn - Reading reply sessionid:0x16ed6f75af80015, packet:: clientPath:null serverPath:null finished:false header:: 3,4  replyHeader:: 3,857,0  request:: '/hbase/meta-region-server,F  response:: #ffffffff0001a726567696f6e7365727665723a3136303230ffffffb4ffffff99ffffffde3affffffe56f3ffffffb150425546a23a17697a627031646e61393179637a64326d773369777a627a10ffffff947d18ffffffb4ffffffd4ffffffddffffffb7ffffffed2d100183,s{773,773,1575564581396,1575564581396,0,0,0,0,76,0,773} 
+DEBUG main-SendThread(47.110.76.197:2181) org.apache.zookeeper.ClientCnxn - Reading reply sessionid:0x16ed6f75af80015, packet:: clientPath:null serverPath:null finished:false header:: 4,8  replyHeader:: 4,857,0  request:: '/hbase,F  response:: v{'replication,'meta-region-server,'rs,'splitWAL,'backup-masters,'table-lock,'flush-table-proc,'region-in-transition,'online-snapshot,'switch,'master,'running,'recovering-regions,'draining,'namespace,'hbaseid,'table} 
+DEBUG hconnection-0x1c72da34-shared--pool1-t1 org.apache.hadoop.hbase.ipc.RpcClientImpl - Use SIMPLE authentication for service ClientService, sasl=false
+DEBUG hconnection-0x1c72da34-shared--pool1-t1 org.apache.hadoop.hbase.ipc.RpcClientImpl - Connecting to izbp1dna91yczd2mw3iwzbz/47.110.76.197:16020
+DEBUG main-SendThread(47.110.76.197:2181) org.apache.zookeeper.ClientCnxn - Reading reply sessionid:0x16ed6f75af80015, packet:: clientPath:null serverPath:null finished:false header:: 5,3  replyHeader:: 5,857,0  request:: '/hbase,F  response:: s{2,2,1575534636744,1575534636744,0,51,0,0,0,17,773} 
+DEBUG main-SendThread(47.110.76.197:2181) org.apache.zookeeper.ClientCnxn - Reading reply sessionid:0x16ed6f75af80015, packet:: clientPath:null serverPath:null finished:false header:: 6,4  replyHeader:: 6,857,0  request:: '/hbase/master,F  response:: #ffffffff000146d61737465723a3136303030fffffff91effffffb85a2afffffffc62950425546a23a17697a627031646e61393179637a64326d773369777a627a10ffffff807d18ffffff91ffffffc2ffffffddffffffb7ffffffed2d10018ffffff8a7d,s{746,746,1575564569453,1575564569453,0,0,0,103256199347568640,71,0,746} 
+DEBUG main org.apache.hadoop.hbase.ipc.RpcClientImpl - Use SIMPLE authentication for service MasterService, sasl=false
+DEBUG main org.apache.hadoop.hbase.ipc.RpcClientImpl - Connecting to izbp1dna91yczd2mw3iwzbz/47.110.76.197:16000
+INFO main org.apache.hadoop.hbase.client.HBaseAdmin - Created FileTable4
+DEBUG main org.apache.hadoop.security.Groups -  Creating new Groups object
+DEBUG main org.apache.hadoop.util.NativeCodeLoader - Trying to load the custom-built native-hadoop library...
+DEBUG main org.apache.hadoop.util.NativeCodeLoader - Failed to load native-hadoop with error: java.lang.UnsatisfiedLinkError: no hadoop in java.library.path
+DEBUG main org.apache.hadoop.util.NativeCodeLoader - java.library.path=D:\Java\jdk1.8.0_112\jre\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;.;D:\oracle\oracle\product\11.2.0\dbhome_1\BIN;D:\Java\jdk1.8.0_112\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;%CATALINA_HOME%\lib;%CATALINA_HOME%\bin;D:\mysql-5.5.59-winx64\mysql-5.5.59-winx64\BIN;E:\TortoiseSVN\bin;D:\apache-maven-3.2.5\bin;E:\Git\cmd;.
+WARN main org.apache.hadoop.util.NativeCodeLoader - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+DEBUG main org.apache.hadoop.security.JniBasedUnixGroupsMappingWithFallback - Falling back to shell based
+DEBUG main org.apache.hadoop.security.JniBasedUnixGroupsMappingWithFallback - Group mapping impl=org.apache.hadoop.security.ShellBasedUnixGroupsMapping
+DEBUG main org.apache.hadoop.util.Shell - Failed to detect a valid hadoop home directory
+java.io.IOException: HADOOP_HOME or hadoop.home.dir are not set.
+	at org.apache.hadoop.util.Shell.checkHadoopHome(Shell.java:302)
+	at org.apache.hadoop.util.Shell.<clinit>(Shell.java:327)
+	at org.apache.hadoop.util.StringUtils.<clinit>(StringUtils.java:78)
+	at org.apache.hadoop.security.Groups.parseStaticMapping(Groups.java:93)
+	at org.apache.hadoop.security.Groups.<init>(Groups.java:77)
+	at org.apache.hadoop.security.Groups.getUserToGroupsMappingService(Groups.java:240)
+	at org.apache.hadoop.security.Groups.getUserToGroupsMappingService(Groups.java:225)
+	at org.apache.hadoop.hbase.security.UserProvider.<clinit>(UserProvider.java:56)
+	at org.apache.hadoop.hbase.client.ConnectionFactory.createConnection(ConnectionFactory.java:214)
+	at org.apache.hadoop.hbase.client.ConnectionFactory.createConnection(ConnectionFactory.java:119)
+	at com.hbase.api.HBaseConn.getConnection(HBaseConn.java:34)
+	at com.hbase.api.HBaseConn.getTable(HBaseConn.java:47)
+	at HbaseConnTest.getTableTest(HbaseConnTest.java:21)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+ERROR main org.apache.hadoop.util.Shell - Failed to locate the winutils binary in the hadoop binary path
+java.io.IOException: Could not locate executable null\bin\winutils.exe in the Hadoop binaries.
+	at org.apache.hadoop.util.Shell.getQualifiedBinPath(Shell.java:355)
+	at org.apache.hadoop.util.Shell.getWinUtilsPath(Shell.java:370)
+	at org.apache.hadoop.util.Shell.<clinit>(Shell.java:363)
+	at org.apache.hadoop.util.StringUtils.<clinit>(StringUtils.java:78)
+	at org.apache.hadoop.security.Groups.parseStaticMapping(Groups.java:93)
+	at org.apache.hadoop.security.Groups.<init>(Groups.java:77)
+	at org.apache.hadoop.security.Groups.getUserToGroupsMappingService(Groups.java:240)
+	at org.apache.hadoop.security.Groups.getUserToGroupsMappingService(Groups.java:225)
+	at org.apache.hadoop.hbase.security.UserProvider.<clinit>(UserProvider.java:56)
+	at org.apache.hadoop.hbase.client.ConnectionFactory.createConnection(ConnectionFactory.java:214)
+	at org.apache.hadoop.hbase.client.ConnectionFactory.createConnection(ConnectionFactory.java:119)
+	at com.hbase.api.HBaseConn.getConnection(HBaseConn.java:34)
+	at com.hbase.api.HBaseConn.getTable(HBaseConn.java:47)
+	at HbaseConnTest.getTableTest(HbaseConnTest.java:21)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+DEBUG main org.apache.hadoop.security.Groups - Group mapping impl=org.apache.hadoop.security.JniBasedUnixGroupsMappingWithFallback; cacheTimeout=300000; warningDeltaMs=5000
+DEBUG main org.apache.hadoop.metrics2.lib.MutableMetricsFactory - field org.apache.hadoop.metrics2.lib.MutableRate org.apache.hadoop.security.UserGroupInformation$UgiMetrics.loginSuccess with annotation @org.apache.hadoop.metrics2.annotation.Metric(about=, sampleName=Ops, always=false, type=DEFAULT, value=[Rate of successful kerberos logins and latency (milliseconds)], valueName=Time)
+DEBUG main org.apache.hadoop.metrics2.lib.MutableMetricsFactory - field org.apache.hadoop.metrics2.lib.MutableRate org.apache.hadoop.security.UserGroupInformation$UgiMetrics.loginFailure with annotation @org.apache.hadoop.metrics2.annotation.Metric(about=, sampleName=Ops, always=false, type=DEFAULT, value=[Rate of failed kerberos logins and latency (milliseconds)], valueName=Time)
+DEBUG main org.apache.hadoop.metrics2.lib.MutableMetricsFactory - field org.apache.hadoop.metrics2.lib.MutableRate org.apache.hadoop.security.UserGroupInformation$UgiMetrics.getGroups with annotation @org.apache.hadoop.metrics2.annotation.Metric(about=, sampleName=Ops, always=false, type=DEFAULT, value=[GetGroups], valueName=Time)
+DEBUG main org.apache.hadoop.metrics2.impl.MetricsSystemImpl - UgiMetrics, User and group related metrics
+DEBUG main org.apache.hadoop.security.authentication.util.KerberosName - Kerberos krb5 configuration not found, setting default realm to empty
+DEBUG main org.apache.hadoop.security.UserGroupInformation - hadoop login
+DEBUG main org.apache.hadoop.security.UserGroupInformation - hadoop login commit
+DEBUG main org.apache.hadoop.security.UserGroupInformation - using local user:NTUserPrincipal: Administrator
+DEBUG main org.apache.hadoop.security.UserGroupInformation - UGI loginUser:Administrator (auth:SIMPLE)
+INFO main org.apache.hadoop.hbase.zookeeper.RecoverableZooKeeper - Process identifier=hconnection-0x2d2e5f00 connecting to ZooKeeper ensemble=47.110.76.197:2181
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:host.name=PC201702131144
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:java.version=1.8.0_112
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:java.vendor=Oracle Corporation
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:java.home=D:\Java\jdk1.8.0_112\jre
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:java.class.path=E:\projectplace\hbaseproject\hbase-api-test\target\test-classes;E:\projectplace\hbaseproject\hbase-api-test\target\classes;D:\repository\repository\org\apache\hbase\hbase-client\1.2.4\hbase-client-1.2.4.jar;D:\repository\repository\org\apache\hbase\hbase-annotations\1.2.4\hbase-annotations-1.2.4.jar;D:\repository\repository\com\github\stephenc\findbugs\findbugs-annotations\1.3.9-1\findbugs-annotations-1.3.9-1.jar;D:\repository\repository\log4j\log4j\1.2.17\log4j-1.2.17.jar;D:\repository\repository\org\apache\hbase\hbase-common\1.2.4\hbase-common-1.2.4.jar;D:\repository\repository\commons-collections\commons-collections\3.2.2\commons-collections-3.2.2.jar;D:\repository\repository\org\mortbay\jetty\jetty-util\6.1.26\jetty-util-6.1.26.jar;D:\repository\repository\org\apache\hbase\hbase-protocol\1.2.4\hbase-protocol-1.2.4.jar;D:\repository\repository\commons-codec\commons-codec\1.9\commons-codec-1.9.jar;D:\repository\repository\commons-io\commons-io\2.4\commons-io-2.4.jar;D:\repository\repository\commons-lang\commons-lang\2.6\commons-lang-2.6.jar;D:\repository\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;D:\repository\repository\com\google\guava\guava\12.0.1\guava-12.0.1.jar;D:\repository\repository\com\google\protobuf\protobuf-java\2.5.0\protobuf-java-2.5.0.jar;D:\repository\repository\io\netty\netty-all\4.0.23.Final\netty-all-4.0.23.Final.jar;D:\repository\repository\org\apache\zookeeper\zookeeper\3.4.6\zookeeper-3.4.6.jar;D:\repository\repository\org\slf4j\slf4j-log4j12\1.6.1\slf4j-log4j12-1.6.1.jar;D:\repository\repository\org\apache\htrace\htrace-core\3.1.0-incubating\htrace-core-3.1.0-incubating.jar;D:\repository\repository\org\codehaus\jackson\jackson-mapper-asl\1.9.13\jackson-mapper-asl-1.9.13.jar;D:\repository\repository\org\codehaus\jackson\jackson-core-asl\1.9.13\jackson-core-asl-1.9.13.jar;D:\repository\repository\org\jruby\jcodings\jcodings\1.0.8\jcodings-1.0.8.jar;D:\repository\repository\org\jruby\joni\joni\2.1.2\joni-2.1.2.jar;D:\repository\repository\com\yammer\metrics\metrics-core\2.2.0\metrics-core-2.2.0.jar;D:\repository\repository\org\apache\hadoop\hadoop-auth\2.5.1\hadoop-auth-2.5.1.jar;D:\repository\repository\org\apache\httpcomponents\httpclient\4.2.5\httpclient-4.2.5.jar;D:\repository\repository\org\apache\httpcomponents\httpcore\4.2.4\httpcore-4.2.4.jar;D:\repository\repository\org\apache\directory\server\apacheds-kerberos-codec\2.0.0-M15\apacheds-kerberos-codec-2.0.0-M15.jar;D:\repository\repository\org\apache\directory\server\apacheds-i18n\2.0.0-M15\apacheds-i18n-2.0.0-M15.jar;D:\repository\repository\org\apache\directory\api\api-asn1-api\1.0.0-M20\api-asn1-api-1.0.0-M20.jar;D:\repository\repository\org\apache\directory\api\api-util\1.0.0-M20\api-util-1.0.0-M20.jar;D:\repository\repository\org\apache\hadoop\hadoop-common\2.5.1\hadoop-common-2.5.1.jar;D:\repository\repository\org\apache\hadoop\hadoop-annotations\2.5.1\hadoop-annotations-2.5.1.jar;D:\Java\jdk1.8.0_112\jre\..\lib\tools.jar;D:\repository\repository\commons-cli\commons-cli\1.2\commons-cli-1.2.jar;D:\repository\repository\org\apache\commons\commons-math3\3.1.1\commons-math3-3.1.1.jar;D:\repository\repository\xmlenc\xmlenc\0.52\xmlenc-0.52.jar;D:\repository\repository\commons-httpclient\commons-httpclient\3.1\commons-httpclient-3.1.jar;D:\repository\repository\commons-net\commons-net\3.1\commons-net-3.1.jar;D:\repository\repository\commons-el\commons-el\1.0\commons-el-1.0.jar;D:\repository\repository\commons-configuration\commons-configuration\1.6\commons-configuration-1.6.jar;D:\repository\repository\commons-digester\commons-digester\1.8\commons-digester-1.8.jar;D:\repository\repository\commons-beanutils\commons-beanutils\1.7.0\commons-beanutils-1.7.0.jar;D:\repository\repository\commons-beanutils\commons-beanutils-core\1.8.0\commons-beanutils-core-1.8.0.jar;D:\repository\repository\org\apache\avro\avro\1.7.4\avro-1.7.4.jar;D:\repository\repository\com\thoughtworks\paranamer\paranamer\2.3\paranamer-2.3.jar;D:\repository\repository\org\xerial\snappy\snappy-java\1.0.4.1\snappy-java-1.0.4.1.jar;D:\repository\repository\com\jcraft\jsch\0.1.42\jsch-0.1.42.jar;D:\repository\repository\com\google\code\findbugs\jsr305\1.3.9\jsr305-1.3.9.jar;D:\repository\repository\org\apache\commons\commons-compress\1.4.1\commons-compress-1.4.1.jar;D:\repository\repository\org\tukaani\xz\1.0\xz-1.0.jar;D:\repository\repository\org\apache\hadoop\hadoop-mapreduce-client-core\2.5.1\hadoop-mapreduce-client-core-2.5.1.jar;D:\repository\repository\org\apache\hadoop\hadoop-yarn-common\2.5.1\hadoop-yarn-common-2.5.1.jar;D:\repository\repository\org\apache\hadoop\hadoop-yarn-api\2.5.1\hadoop-yarn-api-2.5.1.jar;D:\repository\repository\javax\xml\bind\jaxb-api\2.2.2\jaxb-api-2.2.2.jar;D:\repository\repository\javax\xml\stream\stax-api\1.0-2\stax-api-1.0-2.jar;D:\repository\repository\javax\activation\activation\1.1\activation-1.1.jar;D:\repository\repository\io\netty\netty\3.6.2.Final\netty-3.6.2.Final.jar;D:\repository\repository\junit\junit\4.12\junit-4.12.jar;D:\repository\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;D:\repository\repository\ch\qos\logback\logback-classic\1.2.3\logback-classic-1.2.3.jar;D:\repository\repository\ch\qos\logback\logback-core\1.2.3\logback-core-1.2.3.jar;D:\repository\repository\org\slf4j\slf4j-api\1.7.25\slf4j-api-1.7.25.jar;
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:java.library.path=D:\Java\jdk1.8.0_112\jre\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;.;D:\oracle\oracle\product\11.2.0\dbhome_1\BIN;D:\Java\jdk1.8.0_112\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;%CATALINA_HOME%\lib;%CATALINA_HOME%\bin;D:\mysql-5.5.59-winx64\mysql-5.5.59-winx64\BIN;E:\TortoiseSVN\bin;D:\apache-maven-3.2.5\bin;E:\Git\cmd;.
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:java.io.tmpdir=C:\Users\ADMINI~1\AppData\Local\Temp\
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:java.compiler=<NA>
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:os.name=Windows 7
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:os.arch=amd64
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:os.version=6.1
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:user.name=Administrator
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:user.home=C:\Users\Administrator
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:user.dir=E:\projectplace\hbaseproject\hbase-api-test
+INFO main org.apache.zookeeper.ZooKeeper - Initiating client connection, connectString=47.110.76.197:2181 sessionTimeout=90000 watcher=hconnection-0x2d2e5f000x0, quorum=47.110.76.197:2181, baseZNode=/hbase
+DEBUG main org.apache.zookeeper.ClientCnxn - zookeeper.disableAutoWatchReset is false
+INFO main-SendThread(47.110.76.197:2181) org.apache.zookeeper.ClientCnxn - Opening socket connection to server 47.110.76.197/47.110.76.197:2181. Will not attempt to authenticate using SASL (unknown error)
+INFO main-SendThread(47.110.76.197:2181) org.apache.zookeeper.ClientCnxn - Socket connection established to 47.110.76.197/47.110.76.197:2181, initiating session
+DEBUG main-SendThread(47.110.76.197:2181) org.apache.zookeeper.ClientCnxn - Session establishment request sent on 47.110.76.197/47.110.76.197:2181
+INFO main-SendThread(47.110.76.197:2181) org.apache.zookeeper.ClientCnxn - Session establishment complete on server 47.110.76.197/47.110.76.197:2181, sessionid = 0x10014dd871c0008, negotiated timeout = 40000
+DEBUG main-EventThread org.apache.hadoop.hbase.zookeeper.ZooKeeperWatcher - hconnection-0x2d2e5f000x0, quorum=47.110.76.197:2181, baseZNode=/hbase Received ZooKeeper Event, type=None, state=SyncConnected, path=null
+DEBUG main-EventThread org.apache.hadoop.hbase.zookeeper.ZooKeeperWatcher - hconnection-0x2d2e5f00-0x10014dd871c0008 connected
+DEBUG main-SendThread(47.110.76.197:2181) org.apache.zookeeper.ClientCnxn - Reading reply sessionid:0x10014dd871c0008, packet:: clientPath:null serverPath:null finished:false header:: 1,3  replyHeader:: 1,88,0  request:: '/hbase/hbaseid,F  response:: s{17,17,1575879009604,1575879009604,0,0,0,0,67,0,17} 
+DEBUG main-SendThread(47.110.76.197:2181) org.apache.zookeeper.ClientCnxn - Reading reply sessionid:0x10014dd871c0008, packet:: clientPath:null serverPath:null finished:false header:: 2,4  replyHeader:: 2,88,0  request:: '/hbase/hbaseid,F  response:: #ffffffff000146d61737465723a3136303030ffffffc0ffffffa85e2516ffffffdd586f50425546a2464313438613162392d643938302d346532632d393163332d313839363861386233383030,s{17,17,1575879009604,1575879009604,0,0,0,0,67,0,17} 
+DEBUG main org.apache.hadoop.hbase.ipc.AbstractRpcClient - Codec=org.apache.hadoop.hbase.codec.KeyValueCodec@35d019a3, compressor=null, tcpKeepAlive=true, tcpNoDelay=true, connectTO=10000, readTO=20000, writeTO=60000, minIdleTimeBeforeClose=120000, maxRetries=0, fallbackAllowed=false, bind address=null
+DEBUG main-SendThread(47.110.76.197:2181) org.apache.zookeeper.ClientCnxn - Reading reply sessionid:0x10014dd871c0008, packet:: clientPath:null serverPath:null finished:false header:: 3,4  replyHeader:: 3,88,0  request:: '/hbase/meta-region-server,F  response:: #ffffffff0001a726567696f6e7365727665723a3136303230ffffffc81e1fffffffccfffffff2ffffff8b7fffffffe250425546a23a17697a627031646e61393179637a64326d773369777a627a10ffffff947d18ffffffa7ffffffaeffffffd5ffffffcdffffffee2d100183,s{50,50,1575879017930,1575879017930,0,0,0,0,76,0,50} 
+DEBUG main-SendThread(47.110.76.197:2181) org.apache.zookeeper.ClientCnxn - Reading reply sessionid:0x10014dd871c0008, packet:: clientPath:null serverPath:null finished:false header:: 4,8  replyHeader:: 4,88,0  request:: '/hbase,F  response:: v{'replication,'meta-region-server,'rs,'splitWAL,'backup-masters,'table-lock,'flush-table-proc,'region-in-transition,'online-snapshot,'master,'switch,'running,'recovering-regions,'draining,'namespace,'hbaseid,'table} 
+DEBUG hconnection-0x2d2e5f00-metaLookup-shared--pool2-t1 org.apache.hadoop.hbase.ipc.RpcClientImpl - Use SIMPLE authentication for service ClientService, sasl=false
+DEBUG hconnection-0x2d2e5f00-metaLookup-shared--pool2-t1 org.apache.hadoop.hbase.ipc.RpcClientImpl - Connecting to izbp1dna91yczd2mw3iwzbz/47.110.76.197:16020
+DEBUG main org.apache.hadoop.hbase.client.ClientSmallReversedScanner - Finished with small scan at {ENCODED => 1588230740, NAME => 'hbase:meta,,1', STARTKEY => '', ENDKEY => ''}
+ERROR main org.apache.hadoop.hbase.client.AsyncProcess - Failed to get region location 
+org.apache.hadoop.hbase.TableNotFoundException: FileTable
+	at org.apache.hadoop.hbase.client.ConnectionManager$HConnectionImplementation.locateRegionInMeta(ConnectionManager.java:1283)
+	at org.apache.hadoop.hbase.client.ConnectionManager$HConnectionImplementation.locateRegion(ConnectionManager.java:1181)
+	at org.apache.hadoop.hbase.client.AsyncProcess.submit(AsyncProcess.java:410)
+	at org.apache.hadoop.hbase.client.AsyncProcess.submit(AsyncProcess.java:359)
+	at org.apache.hadoop.hbase.client.BufferedMutatorImpl.backgroundFlushCommits(BufferedMutatorImpl.java:238)
+	at org.apache.hadoop.hbase.client.BufferedMutatorImpl.flush(BufferedMutatorImpl.java:190)
+	at org.apache.hadoop.hbase.client.HTable.flushCommits(HTable.java:1434)
+	at org.apache.hadoop.hbase.client.HTable.put(HTable.java:1018)
+	at HBaseUtilTest.writeImg(HBaseUtilTest.java:55)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+DEBUG main org.apache.hadoop.hbase.client.ClientSmallReversedScanner - Finished with small scan at {ENCODED => 1588230740, NAME => 'hbase:meta,,1', STARTKEY => '', ENDKEY => ''}
+DEBUG main org.apache.hadoop.hbase.client.ClientSmallReversedScanner - Finished with small scan at {ENCODED => 1588230740, NAME => 'hbase:meta,,1', STARTKEY => '', ENDKEY => ''}
+DEBUG main-SendThread(47.110.76.197:2181) org.apache.zookeeper.ClientCnxn - Reading reply sessionid:0x10014dd871c0008, packet:: clientPath:null serverPath:null finished:false header:: 5,3  replyHeader:: 5,88,0  request:: '/hbase,F  response:: s{2,2,1575879005502,1575879005502,0,17,0,0,0,17,53} 
+DEBUG main-SendThread(47.110.76.197:2181) org.apache.zookeeper.ClientCnxn - Reading reply sessionid:0x10014dd871c0008, packet:: clientPath:null serverPath:null finished:false header:: 6,4  replyHeader:: 6,88,0  request:: '/hbase/master,F  response:: #ffffffff000146d61737465723a3136303030482effffffbf7dffffff925acffffffdb50425546a23a17697a627031646e61393179637a64326d773369777a627a10ffffff807d18ffffffc3ffffff9cffffffd5ffffffcdffffffee2d10018ffffff8a7d,s{12,12,1575879006502,1575879006502,0,0,0,72080535725015040,71,0,12} 
+DEBUG main org.apache.hadoop.hbase.ipc.RpcClientImpl - Use SIMPLE authentication for service MasterService, sasl=false
+DEBUG main org.apache.hadoop.hbase.ipc.RpcClientImpl - Connecting to izbp1dna91yczd2mw3iwzbz/47.110.76.197:16000
+INFO main org.apache.hadoop.hbase.client.HBaseAdmin - Created FileTable4
+DEBUG main org.apache.hadoop.hbase.client.ClientSmallReversedScanner - Finished with small scan at {ENCODED => 1588230740, NAME => 'hbase:meta,,1', STARTKEY => '', ENDKEY => ''}
+ERROR main org.apache.hadoop.hbase.client.AsyncProcess - Failed to get region location 
+org.apache.hadoop.hbase.TableNotFoundException: FileTable
+	at org.apache.hadoop.hbase.client.ConnectionManager$HConnectionImplementation.locateRegionInMeta(ConnectionManager.java:1283)
+	at org.apache.hadoop.hbase.client.ConnectionManager$HConnectionImplementation.locateRegion(ConnectionManager.java:1181)
+	at org.apache.hadoop.hbase.client.AsyncProcess.submit(AsyncProcess.java:410)
+	at org.apache.hadoop.hbase.client.AsyncProcess.submit(AsyncProcess.java:359)
+	at org.apache.hadoop.hbase.client.BufferedMutatorImpl.backgroundFlushCommits(BufferedMutatorImpl.java:238)
+	at org.apache.hadoop.hbase.client.BufferedMutatorImpl.flush(BufferedMutatorImpl.java:190)
+	at org.apache.hadoop.hbase.client.HTable.flushCommits(HTable.java:1434)
+	at org.apache.hadoop.hbase.client.HTable.put(HTable.java:1018)
+	at com.hbase.api.HBaseUtil.putRow(HBaseUtil.java:83)
+	at HBaseUtilTest.addFileDetails(HBaseUtilTest.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+DEBUG main org.apache.hadoop.hbase.client.ClientSmallReversedScanner - Finished with small scan at {ENCODED => 1588230740, NAME => 'hbase:meta,,1', STARTKEY => '', ENDKEY => ''}
+ERROR main org.apache.hadoop.hbase.client.AsyncProcess - Failed to get region location 
+org.apache.hadoop.hbase.TableNotFoundException: FileTable
+	at org.apache.hadoop.hbase.client.ConnectionManager$HConnectionImplementation.locateRegionInMeta(ConnectionManager.java:1283)
+	at org.apache.hadoop.hbase.client.ConnectionManager$HConnectionImplementation.locateRegion(ConnectionManager.java:1181)
+	at org.apache.hadoop.hbase.client.AsyncProcess.submit(AsyncProcess.java:410)
+	at org.apache.hadoop.hbase.client.AsyncProcess.submit(AsyncProcess.java:359)
+	at org.apache.hadoop.hbase.client.BufferedMutatorImpl.backgroundFlushCommits(BufferedMutatorImpl.java:238)
+	at org.apache.hadoop.hbase.client.BufferedMutatorImpl.flush(BufferedMutatorImpl.java:190)
+	at org.apache.hadoop.hbase.client.HTable.flushCommits(HTable.java:1434)
+	at org.apache.hadoop.hbase.client.HTable.put(HTable.java:1018)
+	at com.hbase.api.HBaseUtil.putRow(HBaseUtil.java:83)
+	at HBaseUtilTest.addFileDetails(HBaseUtilTest.java:29)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+DEBUG main org.apache.hadoop.hbase.client.ClientSmallReversedScanner - Finished with small scan at {ENCODED => 1588230740, NAME => 'hbase:meta,,1', STARTKEY => '', ENDKEY => ''}
+ERROR main org.apache.hadoop.hbase.client.AsyncProcess - Failed to get region location 
+org.apache.hadoop.hbase.TableNotFoundException: FileTable
+	at org.apache.hadoop.hbase.client.ConnectionManager$HConnectionImplementation.locateRegionInMeta(ConnectionManager.java:1283)
+	at org.apache.hadoop.hbase.client.ConnectionManager$HConnectionImplementation.locateRegion(ConnectionManager.java:1181)
+	at org.apache.hadoop.hbase.client.AsyncProcess.submit(AsyncProcess.java:410)
+	at org.apache.hadoop.hbase.client.AsyncProcess.submit(AsyncProcess.java:359)
+	at org.apache.hadoop.hbase.client.BufferedMutatorImpl.backgroundFlushCommits(BufferedMutatorImpl.java:238)
+	at org.apache.hadoop.hbase.client.BufferedMutatorImpl.flush(BufferedMutatorImpl.java:190)
+	at org.apache.hadoop.hbase.client.HTable.flushCommits(HTable.java:1434)
+	at org.apache.hadoop.hbase.client.HTable.put(HTable.java:1018)
+	at com.hbase.api.HBaseUtil.putRow(HBaseUtil.java:83)
+	at HBaseUtilTest.addFileDetails(HBaseUtilTest.java:30)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+DEBUG main org.apache.hadoop.hbase.client.ClientSmallReversedScanner - Finished with small scan at {ENCODED => 1588230740, NAME => 'hbase:meta,,1', STARTKEY => '', ENDKEY => ''}
+ERROR main org.apache.hadoop.hbase.client.AsyncProcess - Failed to get region location 
+org.apache.hadoop.hbase.TableNotFoundException: FileTable
+	at org.apache.hadoop.hbase.client.ConnectionManager$HConnectionImplementation.locateRegionInMeta(ConnectionManager.java:1283)
+	at org.apache.hadoop.hbase.client.ConnectionManager$HConnectionImplementation.locateRegion(ConnectionManager.java:1181)
+	at org.apache.hadoop.hbase.client.AsyncProcess.submit(AsyncProcess.java:410)
+	at org.apache.hadoop.hbase.client.AsyncProcess.submit(AsyncProcess.java:359)
+	at org.apache.hadoop.hbase.client.BufferedMutatorImpl.backgroundFlushCommits(BufferedMutatorImpl.java:238)
+	at org.apache.hadoop.hbase.client.BufferedMutatorImpl.flush(BufferedMutatorImpl.java:190)
+	at org.apache.hadoop.hbase.client.HTable.flushCommits(HTable.java:1434)
+	at org.apache.hadoop.hbase.client.HTable.put(HTable.java:1018)
+	at com.hbase.api.HBaseUtil.putRow(HBaseUtil.java:83)
+	at HBaseUtilTest.addFileDetails(HBaseUtilTest.java:31)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+DEBUG main org.apache.hadoop.hbase.client.ClientSmallReversedScanner - Finished with small scan at {ENCODED => 1588230740, NAME => 'hbase:meta,,1', STARTKEY => '', ENDKEY => ''}
+ERROR main org.apache.hadoop.hbase.client.AsyncProcess - Failed to get region location 
+org.apache.hadoop.hbase.TableNotFoundException: FileTable
+	at org.apache.hadoop.hbase.client.ConnectionManager$HConnectionImplementation.locateRegionInMeta(ConnectionManager.java:1283)
+	at org.apache.hadoop.hbase.client.ConnectionManager$HConnectionImplementation.locateRegion(ConnectionManager.java:1181)
+	at org.apache.hadoop.hbase.client.AsyncProcess.submit(AsyncProcess.java:410)
+	at org.apache.hadoop.hbase.client.AsyncProcess.submit(AsyncProcess.java:359)
+	at org.apache.hadoop.hbase.client.BufferedMutatorImpl.backgroundFlushCommits(BufferedMutatorImpl.java:238)
+	at org.apache.hadoop.hbase.client.BufferedMutatorImpl.flush(BufferedMutatorImpl.java:190)
+	at org.apache.hadoop.hbase.client.HTable.flushCommits(HTable.java:1434)
+	at org.apache.hadoop.hbase.client.HTable.put(HTable.java:1018)
+	at com.hbase.api.HBaseUtil.putRow(HBaseUtil.java:83)
+	at HBaseUtilTest.addFileDetails(HBaseUtilTest.java:32)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+DEBUG main org.apache.hadoop.hbase.client.ClientSmallReversedScanner - Finished with small scan at {ENCODED => 1588230740, NAME => 'hbase:meta,,1', STARTKEY => '', ENDKEY => ''}
+ERROR main org.apache.hadoop.hbase.client.AsyncProcess - Failed to get region location 
+org.apache.hadoop.hbase.TableNotFoundException: FileTable
+	at org.apache.hadoop.hbase.client.ConnectionManager$HConnectionImplementation.locateRegionInMeta(ConnectionManager.java:1283)
+	at org.apache.hadoop.hbase.client.ConnectionManager$HConnectionImplementation.locateRegion(ConnectionManager.java:1181)
+	at org.apache.hadoop.hbase.client.AsyncProcess.submit(AsyncProcess.java:410)
+	at org.apache.hadoop.hbase.client.AsyncProcess.submit(AsyncProcess.java:359)
+	at org.apache.hadoop.hbase.client.BufferedMutatorImpl.backgroundFlushCommits(BufferedMutatorImpl.java:238)
+	at org.apache.hadoop.hbase.client.BufferedMutatorImpl.flush(BufferedMutatorImpl.java:190)
+	at org.apache.hadoop.hbase.client.HTable.flushCommits(HTable.java:1434)
+	at org.apache.hadoop.hbase.client.HTable.put(HTable.java:1018)
+	at com.hbase.api.HBaseUtil.putRow(HBaseUtil.java:83)
+	at HBaseUtilTest.addFileDetails(HBaseUtilTest.java:33)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+DEBUG main org.apache.hadoop.hbase.client.ClientSmallReversedScanner - Finished with small scan at {ENCODED => 1588230740, NAME => 'hbase:meta,,1', STARTKEY => '', ENDKEY => ''}
+ERROR main org.apache.hadoop.hbase.client.AsyncProcess - Failed to get region location 
+org.apache.hadoop.hbase.TableNotFoundException: FileTable
+	at org.apache.hadoop.hbase.client.ConnectionManager$HConnectionImplementation.locateRegionInMeta(ConnectionManager.java:1283)
+	at org.apache.hadoop.hbase.client.ConnectionManager$HConnectionImplementation.locateRegion(ConnectionManager.java:1181)
+	at org.apache.hadoop.hbase.client.AsyncProcess.submit(AsyncProcess.java:410)
+	at org.apache.hadoop.hbase.client.AsyncProcess.submit(AsyncProcess.java:359)
+	at org.apache.hadoop.hbase.client.BufferedMutatorImpl.backgroundFlushCommits(BufferedMutatorImpl.java:238)
+	at org.apache.hadoop.hbase.client.BufferedMutatorImpl.flush(BufferedMutatorImpl.java:190)
+	at org.apache.hadoop.hbase.client.HTable.flushCommits(HTable.java:1434)
+	at org.apache.hadoop.hbase.client.HTable.put(HTable.java:1018)
+	at com.hbase.api.HBaseUtil.putRow(HBaseUtil.java:83)
+	at HBaseUtilTest.addFileDetails(HBaseUtilTest.java:34)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+DEBUG main org.apache.hadoop.hbase.client.ClientSmallReversedScanner - Finished with small scan at {ENCODED => 1588230740, NAME => 'hbase:meta,,1', STARTKEY => '', ENDKEY => ''}
+ERROR main org.apache.hadoop.hbase.client.AsyncProcess - Failed to get region location 
+org.apache.hadoop.hbase.TableNotFoundException: FileTable
+	at org.apache.hadoop.hbase.client.ConnectionManager$HConnectionImplementation.locateRegionInMeta(ConnectionManager.java:1283)
+	at org.apache.hadoop.hbase.client.ConnectionManager$HConnectionImplementation.locateRegion(ConnectionManager.java:1181)
+	at org.apache.hadoop.hbase.client.AsyncProcess.submit(AsyncProcess.java:410)
+	at org.apache.hadoop.hbase.client.AsyncProcess.submit(AsyncProcess.java:359)
+	at org.apache.hadoop.hbase.client.BufferedMutatorImpl.backgroundFlushCommits(BufferedMutatorImpl.java:238)
+	at org.apache.hadoop.hbase.client.BufferedMutatorImpl.flush(BufferedMutatorImpl.java:190)
+	at org.apache.hadoop.hbase.client.HTable.flushCommits(HTable.java:1434)
+	at org.apache.hadoop.hbase.client.HTable.put(HTable.java:1018)
+	at com.hbase.api.HBaseUtil.putRow(HBaseUtil.java:83)
+	at HBaseUtilTest.addFileDetails(HBaseUtilTest.java:35)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+DEBUG main org.apache.hadoop.security.Groups -  Creating new Groups object
+DEBUG main org.apache.hadoop.util.NativeCodeLoader - Trying to load the custom-built native-hadoop library...
+DEBUG main org.apache.hadoop.util.NativeCodeLoader - Failed to load native-hadoop with error: java.lang.UnsatisfiedLinkError: no hadoop in java.library.path
+DEBUG main org.apache.hadoop.util.NativeCodeLoader - java.library.path=D:\Java\jdk1.8.0_112\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;.;D:\oracle\oracle\product\11.2.0\dbhome_1\BIN;D:\Java\jdk1.8.0_112\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;%CATALINA_HOME%\lib;%CATALINA_HOME%\bin;D:\mysql-5.5.59-winx64\mysql-5.5.59-winx64\BIN;E:\TortoiseSVN\bin;D:\apache-maven-3.2.5\bin;E:\Git\cmd;.
+WARN main org.apache.hadoop.util.NativeCodeLoader - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+DEBUG main org.apache.hadoop.security.JniBasedUnixGroupsMappingWithFallback - Falling back to shell based
+DEBUG main org.apache.hadoop.security.JniBasedUnixGroupsMappingWithFallback - Group mapping impl=org.apache.hadoop.security.ShellBasedUnixGroupsMapping
+DEBUG main org.apache.hadoop.util.Shell - Failed to detect a valid hadoop home directory
+java.io.IOException: HADOOP_HOME or hadoop.home.dir are not set.
+	at org.apache.hadoop.util.Shell.checkHadoopHome(Shell.java:302)
+	at org.apache.hadoop.util.Shell.<clinit>(Shell.java:327)
+	at org.apache.hadoop.util.StringUtils.<clinit>(StringUtils.java:78)
+	at org.apache.hadoop.security.Groups.parseStaticMapping(Groups.java:93)
+	at org.apache.hadoop.security.Groups.<init>(Groups.java:77)
+	at org.apache.hadoop.security.Groups.getUserToGroupsMappingService(Groups.java:240)
+	at org.apache.hadoop.security.Groups.getUserToGroupsMappingService(Groups.java:225)
+	at org.apache.hadoop.hbase.security.UserProvider.<clinit>(UserProvider.java:56)
+	at org.apache.hadoop.hbase.client.ConnectionFactory.createConnection(ConnectionFactory.java:214)
+	at org.apache.hadoop.hbase.client.ConnectionFactory.createConnection(ConnectionFactory.java:119)
+	at com.hbase.api.HBaseConn.getConnection(HBaseConn.java:35)
+	at com.hbase.api.HBaseConn.getHbaseConn(HBaseConn.java:44)
+	at com.hbase.api.HBaseUtil.createTable(HBaseUtil.java:35)
+	at HBaseUtilTest.createTable(HBaseUtilTest.java:26)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
+ERROR main org.apache.hadoop.util.Shell - Failed to locate the winutils binary in the hadoop binary path
+java.io.IOException: Could not locate executable null\bin\winutils.exe in the Hadoop binaries.
+	at org.apache.hadoop.util.Shell.getQualifiedBinPath(Shell.java:355)
+	at org.apache.hadoop.util.Shell.getWinUtilsPath(Shell.java:370)
+	at org.apache.hadoop.util.Shell.<clinit>(Shell.java:363)
+	at org.apache.hadoop.util.StringUtils.<clinit>(StringUtils.java:78)
+	at org.apache.hadoop.security.Groups.parseStaticMapping(Groups.java:93)
+	at org.apache.hadoop.security.Groups.<init>(Groups.java:77)
+	at org.apache.hadoop.security.Groups.getUserToGroupsMappingService(Groups.java:240)
+	at org.apache.hadoop.security.Groups.getUserToGroupsMappingService(Groups.java:225)
+	at org.apache.hadoop.hbase.security.UserProvider.<clinit>(UserProvider.java:56)
+	at org.apache.hadoop.hbase.client.ConnectionFactory.createConnection(ConnectionFactory.java:214)
+	at org.apache.hadoop.hbase.client.ConnectionFactory.createConnection(ConnectionFactory.java:119)
+	at com.hbase.api.HBaseConn.getConnection(HBaseConn.java:35)
+	at com.hbase.api.HBaseConn.getHbaseConn(HBaseConn.java:44)
+	at com.hbase.api.HBaseUtil.createTable(HBaseUtil.java:35)
+	at HBaseUtilTest.createTable(HBaseUtilTest.java:26)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
+DEBUG main org.apache.hadoop.security.Groups - Group mapping impl=org.apache.hadoop.security.JniBasedUnixGroupsMappingWithFallback; cacheTimeout=300000; warningDeltaMs=5000
+DEBUG main org.apache.hadoop.metrics2.lib.MutableMetricsFactory - field org.apache.hadoop.metrics2.lib.MutableRate org.apache.hadoop.security.UserGroupInformation$UgiMetrics.loginSuccess with annotation @org.apache.hadoop.metrics2.annotation.Metric(always=false, about=, sampleName=Ops, type=DEFAULT, value=[Rate of successful kerberos logins and latency (milliseconds)], valueName=Time)
+DEBUG main org.apache.hadoop.metrics2.lib.MutableMetricsFactory - field org.apache.hadoop.metrics2.lib.MutableRate org.apache.hadoop.security.UserGroupInformation$UgiMetrics.loginFailure with annotation @org.apache.hadoop.metrics2.annotation.Metric(always=false, about=, sampleName=Ops, type=DEFAULT, value=[Rate of failed kerberos logins and latency (milliseconds)], valueName=Time)
+DEBUG main org.apache.hadoop.metrics2.lib.MutableMetricsFactory - field org.apache.hadoop.metrics2.lib.MutableRate org.apache.hadoop.security.UserGroupInformation$UgiMetrics.getGroups with annotation @org.apache.hadoop.metrics2.annotation.Metric(always=false, about=, sampleName=Ops, type=DEFAULT, value=[GetGroups], valueName=Time)
+DEBUG main org.apache.hadoop.metrics2.impl.MetricsSystemImpl - UgiMetrics, User and group related metrics
+DEBUG main org.apache.hadoop.security.authentication.util.KerberosName - Kerberos krb5 configuration not found, setting default realm to empty
+DEBUG main org.apache.hadoop.security.UserGroupInformation - hadoop login
+DEBUG main org.apache.hadoop.security.UserGroupInformation - hadoop login commit
+DEBUG main org.apache.hadoop.security.UserGroupInformation - using local user:NTUserPrincipal: Administrator
+DEBUG main org.apache.hadoop.security.UserGroupInformation - UGI loginUser:Administrator (auth:SIMPLE)
+INFO main org.apache.hadoop.hbase.zookeeper.RecoverableZooKeeper - Process identifier=hconnection-0x3932c79a connecting to ZooKeeper ensemble=47.110.76.197:2181
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:host.name=PC201702131144
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:java.version=1.8.0_112
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:java.vendor=Oracle Corporation
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:java.home=D:\Java\jdk1.8.0_112\jre
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:java.class.path=E:\idea\lib\idea_rt.jar;E:\idea\plugins\junit\lib\junit-rt.jar;E:\idea\plugins\junit\lib\junit5-rt.jar;D:\Java\jdk1.8.0_112\jre\lib\charsets.jar;D:\Java\jdk1.8.0_112\jre\lib\deploy.jar;D:\Java\jdk1.8.0_112\jre\lib\ext\access-bridge-64.jar;D:\Java\jdk1.8.0_112\jre\lib\ext\cldrdata.jar;D:\Java\jdk1.8.0_112\jre\lib\ext\dnsns.jar;D:\Java\jdk1.8.0_112\jre\lib\ext\jaccess.jar;D:\Java\jdk1.8.0_112\jre\lib\ext\jfxrt.jar;D:\Java\jdk1.8.0_112\jre\lib\ext\localedata.jar;D:\Java\jdk1.8.0_112\jre\lib\ext\nashorn.jar;D:\Java\jdk1.8.0_112\jre\lib\ext\sunec.jar;D:\Java\jdk1.8.0_112\jre\lib\ext\sunjce_provider.jar;D:\Java\jdk1.8.0_112\jre\lib\ext\sunmscapi.jar;D:\Java\jdk1.8.0_112\jre\lib\ext\sunpkcs11.jar;D:\Java\jdk1.8.0_112\jre\lib\ext\zipfs.jar;D:\Java\jdk1.8.0_112\jre\lib\javaws.jar;D:\Java\jdk1.8.0_112\jre\lib\jce.jar;D:\Java\jdk1.8.0_112\jre\lib\jfr.jar;D:\Java\jdk1.8.0_112\jre\lib\jfxswt.jar;D:\Java\jdk1.8.0_112\jre\lib\jsse.jar;D:\Java\jdk1.8.0_112\jre\lib\management-agent.jar;D:\Java\jdk1.8.0_112\jre\lib\plugin.jar;D:\Java\jdk1.8.0_112\jre\lib\resources.jar;D:\Java\jdk1.8.0_112\jre\lib\rt.jar;E:\projectplace\hbaseproject\hbase-api-test\target\test-classes;E:\projectplace\hbaseproject\hbase-api-test\target\classes;D:\repository\repository\org\apache\hbase\hbase-client\1.2.4\hbase-client-1.2.4.jar;D:\repository\repository\org\apache\hbase\hbase-annotations\1.2.4\hbase-annotations-1.2.4.jar;D:\repository\repository\com\github\stephenc\findbugs\findbugs-annotations\1.3.9-1\findbugs-annotations-1.3.9-1.jar;D:\repository\repository\log4j\log4j\1.2.17\log4j-1.2.17.jar;D:\repository\repository\org\apache\hbase\hbase-common\1.2.4\hbase-common-1.2.4.jar;D:\repository\repository\commons-collections\commons-collections\3.2.2\commons-collections-3.2.2.jar;D:\repository\repository\org\mortbay\jetty\jetty-util\6.1.26\jetty-util-6.1.26.jar;D:\repository\repository\org\apache\hbase\hbase-protocol\1.2.4\hbase-protocol-1.2.4.jar;D:\repository\repository\commons-codec\commons-codec\1.9\commons-codec-1.9.jar;D:\repository\repository\commons-io\commons-io\2.4\commons-io-2.4.jar;D:\repository\repository\commons-lang\commons-lang\2.6\commons-lang-2.6.jar;D:\repository\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;D:\repository\repository\com\google\guava\guava\12.0.1\guava-12.0.1.jar;D:\repository\repository\com\google\protobuf\protobuf-java\2.5.0\protobuf-java-2.5.0.jar;D:\repository\repository\io\netty\netty-all\4.0.23.Final\netty-all-4.0.23.Final.jar;D:\repository\repository\org\apache\zookeeper\zookeeper\3.4.6\zookeeper-3.4.6.jar;D:\repository\repository\org\slf4j\slf4j-log4j12\1.6.1\slf4j-log4j12-1.6.1.jar;D:\repository\repository\org\apache\htrace\htrace-core\3.1.0-incubating\htrace-core-3.1.0-incubating.jar;D:\repository\repository\org\codehaus\jackson\jackson-mapper-asl\1.9.13\jackson-mapper-asl-1.9.13.jar;D:\repository\repository\org\codehaus\jackson\jackson-core-asl\1.9.13\jackson-core-asl-1.9.13.jar;D:\repository\repository\org\jruby\jcodings\jcodings\1.0.8\jcodings-1.0.8.jar;D:\repository\repository\org\jruby\joni\joni\2.1.2\joni-2.1.2.jar;D:\repository\repository\com\yammer\metrics\metrics-core\2.2.0\metrics-core-2.2.0.jar;D:\repository\repository\org\apache\hadoop\hadoop-auth\2.5.1\hadoop-auth-2.5.1.jar;D:\repository\repository\org\apache\httpcomponents\httpclient\4.2.5\httpclient-4.2.5.jar;D:\repository\repository\org\apache\httpcomponents\httpcore\4.2.4\httpcore-4.2.4.jar;D:\repository\repository\org\apache\directory\server\apacheds-kerberos-codec\2.0.0-M15\apacheds-kerberos-codec-2.0.0-M15.jar;D:\repository\repository\org\apache\directory\server\apacheds-i18n\2.0.0-M15\apacheds-i18n-2.0.0-M15.jar;D:\repository\repository\org\apache\directory\api\api-asn1-api\1.0.0-M20\api-asn1-api-1.0.0-M20.jar;D:\repository\repository\org\apache\directory\api\api-util\1.0.0-M20\api-util-1.0.0-M20.jar;D:\repository\repository\org\apache\hadoop\hadoop-common\2.5.1\hadoop-common-2.5.1.jar;D:\repository\repository\org\apache\hadoop\hadoop-annotations\2.5.1\hadoop-annotations-2.5.1.jar;D:\Java\jdk1.8.0_112\lib\tools.jar;D:\repository\repository\commons-cli\commons-cli\1.2\commons-cli-1.2.jar;D:\repository\repository\org\apache\commons\commons-math3\3.1.1\commons-math3-3.1.1.jar;D:\repository\repository\xmlenc\xmlenc\0.52\xmlenc-0.52.jar;D:\repository\repository\commons-httpclient\commons-httpclient\3.1\commons-httpclient-3.1.jar;D:\repository\repository\commons-net\commons-net\3.1\commons-net-3.1.jar;D:\repository\repository\commons-el\commons-el\1.0\commons-el-1.0.jar;D:\repository\repository\commons-configuration\commons-configuration\1.6\commons-configuration-1.6.jar;D:\repository\repository\commons-digester\commons-digester\1.8\commons-digester-1.8.jar;D:\repository\repository\commons-beanutils\commons-beanutils\1.7.0\commons-beanutils-1.7.0.jar;D:\repository\repository\commons-beanutils\commons-beanutils-core\1.8.0\commons-beanutils-core-1.8.0.jar;D:\repository\repository\org\apache\avro\avro\1.7.4\avro-1.7.4.jar;D:\repository\repository\com\thoughtworks\paranamer\paranamer\2.3\paranamer-2.3.jar;D:\repository\repository\org\xerial\snappy\snappy-java\1.0.4.1\snappy-java-1.0.4.1.jar;D:\repository\repository\com\jcraft\jsch\0.1.42\jsch-0.1.42.jar;D:\repository\repository\com\google\code\findbugs\jsr305\1.3.9\jsr305-1.3.9.jar;D:\repository\repository\org\apache\commons\commons-compress\1.4.1\commons-compress-1.4.1.jar;D:\repository\repository\org\tukaani\xz\1.0\xz-1.0.jar;D:\repository\repository\org\apache\hadoop\hadoop-mapreduce-client-core\2.5.1\hadoop-mapreduce-client-core-2.5.1.jar;D:\repository\repository\org\apache\hadoop\hadoop-yarn-common\2.5.1\hadoop-yarn-common-2.5.1.jar;D:\repository\repository\org\apache\hadoop\hadoop-yarn-api\2.5.1\hadoop-yarn-api-2.5.1.jar;D:\repository\repository\javax\xml\bind\jaxb-api\2.2.2\jaxb-api-2.2.2.jar;D:\repository\repository\javax\xml\stream\stax-api\1.0-2\stax-api-1.0-2.jar;D:\repository\repository\javax\activation\activation\1.1\activation-1.1.jar;D:\repository\repository\io\netty\netty\3.6.2.Final\netty-3.6.2.Final.jar;D:\repository\repository\junit\junit\4.12\junit-4.12.jar;D:\repository\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;D:\repository\repository\ch\qos\logback\logback-classic\1.2.3\logback-classic-1.2.3.jar;D:\repository\repository\ch\qos\logback\logback-core\1.2.3\logback-core-1.2.3.jar;D:\repository\repository\org\slf4j\slf4j-api\1.7.25\slf4j-api-1.7.25.jar;E:\idea\lib\rt\debugger-agent.jar
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:java.library.path=D:\Java\jdk1.8.0_112\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;.;D:\oracle\oracle\product\11.2.0\dbhome_1\BIN;D:\Java\jdk1.8.0_112\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;%CATALINA_HOME%\lib;%CATALINA_HOME%\bin;D:\mysql-5.5.59-winx64\mysql-5.5.59-winx64\BIN;E:\TortoiseSVN\bin;D:\apache-maven-3.2.5\bin;E:\Git\cmd;.
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:java.io.tmpdir=C:\Users\ADMINI~1\AppData\Local\Temp\
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:java.compiler=<NA>
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:os.name=Windows 7
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:os.arch=amd64
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:os.version=6.1
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:user.name=Administrator
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:user.home=C:\Users\Administrator
+INFO main org.apache.zookeeper.ZooKeeper - Client environment:user.dir=E:\projectplace\hbaseproject\hbase-api-test
+INFO main org.apache.zookeeper.ZooKeeper - Initiating client connection, connectString=47.110.76.197:2181 sessionTimeout=90000 watcher=hconnection-0x3932c79a0x0, quorum=47.110.76.197:2181, baseZNode=/hbase
+DEBUG main org.apache.zookeeper.ClientCnxn - zookeeper.disableAutoWatchReset is false
+INFO main-SendThread(47.110.76.197:2181) org.apache.zookeeper.ClientCnxn - Opening socket connection to server 47.110.76.197/47.110.76.197:2181. Will not attempt to authenticate using SASL (unknown error)
+INFO main-SendThread(47.110.76.197:2181) org.apache.zookeeper.ClientCnxn - Socket connection established to 47.110.76.197/47.110.76.197:2181, initiating session
+DEBUG main-SendThread(47.110.76.197:2181) org.apache.zookeeper.ClientCnxn - Session establishment request sent on 47.110.76.197/47.110.76.197:2181
+INFO main-SendThread(47.110.76.197:2181) org.apache.zookeeper.ClientCnxn - Session establishment complete on server 47.110.76.197/47.110.76.197:2181, sessionid = 0x10014dd871c000a, negotiated timeout = 40000
+DEBUG main-EventThread org.apache.hadoop.hbase.zookeeper.ZooKeeperWatcher - hconnection-0x3932c79a0x0, quorum=47.110.76.197:2181, baseZNode=/hbase Received ZooKeeper Event, type=None, state=SyncConnected, path=null
+DEBUG main-EventThread org.apache.hadoop.hbase.zookeeper.ZooKeeperWatcher - hconnection-0x3932c79a-0x10014dd871c000a connected
+DEBUG main-SendThread(47.110.76.197:2181) org.apache.zookeeper.ClientCnxn - Reading reply sessionid:0x10014dd871c000a, packet:: clientPath:null serverPath:null finished:false header:: 1,3  replyHeader:: 1,102,0  request:: '/hbase/hbaseid,F  response:: s{17,17,1575879009604,1575879009604,0,0,0,0,67,0,17} 
+DEBUG main-SendThread(47.110.76.197:2181) org.apache.zookeeper.ClientCnxn - Reading reply sessionid:0x10014dd871c000a, packet:: clientPath:null serverPath:null finished:false header:: 2,4  replyHeader:: 2,102,0  request:: '/hbase/hbaseid,F  response:: #ffffffff000146d61737465723a3136303030ffffffc0ffffffa85e2516ffffffdd586f50425546a2464313438613162392d643938302d346532632d393163332d313839363861386233383030,s{17,17,1575879009604,1575879009604,0,0,0,0,67,0,17} 
+DEBUG main org.apache.hadoop.hbase.ipc.AbstractRpcClient - Codec=org.apache.hadoop.hbase.codec.KeyValueCodec@146587a2, compressor=null, tcpKeepAlive=true, tcpNoDelay=true, connectTO=10000, readTO=20000, writeTO=60000, minIdleTimeBeforeClose=120000, maxRetries=0, fallbackAllowed=false, bind address=null
+DEBUG main-SendThread(47.110.76.197:2181) org.apache.zookeeper.ClientCnxn - Reading reply sessionid:0x10014dd871c000a, packet:: clientPath:null serverPath:null finished:false header:: 3,4  replyHeader:: 3,102,0  request:: '/hbase/meta-region-server,F  response:: #ffffffff0001a726567696f6e7365727665723a3136303230ffffffc81e1fffffffccfffffff2ffffff8b7fffffffe250425546a23a17697a627031646e61393179637a64326d773369777a627a10ffffff947d18ffffffa7ffffffaeffffffd5ffffffcdffffffee2d100183,s{50,50,1575879017930,1575879017930,0,0,0,0,76,0,50} 
+DEBUG main-SendThread(47.110.76.197:2181) org.apache.zookeeper.ClientCnxn - Reading reply sessionid:0x10014dd871c000a, packet:: clientPath:null serverPath:null finished:false header:: 4,8  replyHeader:: 4,102,0  request:: '/hbase,F  response:: v{'replication,'meta-region-server,'rs,'splitWAL,'backup-masters,'table-lock,'flush-table-proc,'region-in-transition,'online-snapshot,'master,'switch,'running,'recovering-regions,'draining,'namespace,'hbaseid,'table} 
+DEBUG main-SendThread(47.110.76.197:2181) org.apache.zookeeper.ClientCnxn - Reading reply sessionid:0x10014dd871c000a, packet:: clientPath:null serverPath:null finished:false header:: 5,4  replyHeader:: 5,102,0  request:: '/hbase/meta-region-server,F  response:: #ffffffff0001a726567696f6e7365727665723a3136303230ffffffc81e1fffffffccfffffff2ffffff8b7fffffffe250425546a23a17697a627031646e61393179637a64326d773369777a627a10ffffff947d18ffffffa7ffffffaeffffffd5ffffffcdffffffee2d100183,s{50,50,1575879017930,1575879017930,0,0,0,0,76,0,50} 
+DEBUG main-SendThread(47.110.76.197:2181) org.apache.zookeeper.ClientCnxn - Reading reply sessionid:0x10014dd871c000a, packet:: clientPath:null serverPath:null finished:false header:: 6,8  replyHeader:: 6,102,0  request:: '/hbase,F  response:: v{'replication,'meta-region-server,'rs,'splitWAL,'backup-masters,'table-lock,'flush-table-proc,'region-in-transition,'online-snapshot,'master,'switch,'running,'recovering-regions,'draining,'namespace,'hbaseid,'table} 
+DEBUG main-SendThread(47.110.76.197:2181) org.apache.zookeeper.ClientCnxn - Reading reply sessionid:0x10014dd871c000a, packet:: clientPath:null serverPath:null finished:false header:: 7,4  replyHeader:: 7,102,0  request:: '/hbase/meta-region-server,F  response:: #ffffffff0001a726567696f6e7365727665723a3136303230ffffffc81e1fffffffccfffffff2ffffff8b7fffffffe250425546a23a17697a627031646e61393179637a64326d773369777a627a10ffffff947d18ffffffa7ffffffaeffffffd5ffffffcdffffffee2d100183,s{50,50,1575879017930,1575879017930,0,0,0,0,76,0,50} 
+DEBUG main-SendThread(47.110.76.197:2181) org.apache.zookeeper.ClientCnxn - Reading reply sessionid:0x10014dd871c000a, packet:: clientPath:null serverPath:null finished:false header:: 8,8  replyHeader:: 8,102,0  request:: '/hbase,F  response:: v{'replication,'meta-region-server,'rs,'splitWAL,'backup-masters,'table-lock,'flush-table-proc,'region-in-transition,'online-snapshot,'master,'switch,'running,'recovering-regions,'draining,'namespace,'hbaseid,'table} 
+DEBUG main-SendThread(47.110.76.197:2181) org.apache.zookeeper.ClientCnxn - Reading reply sessionid:0x10014dd871c000a, packet:: clientPath:null serverPath:null finished:false header:: 9,4  replyHeader:: 9,102,0  request:: '/hbase/meta-region-server,F  response:: #ffffffff0001a726567696f6e7365727665723a3136303230ffffffc81e1fffffffccfffffff2ffffff8b7fffffffe250425546a23a17697a627031646e61393179637a64326d773369777a627a10ffffff947d18ffffffa7ffffffaeffffffd5ffffffcdffffffee2d100183,s{50,50,1575879017930,1575879017930,0,0,0,0,76,0,50} 
+DEBUG main-SendThread(47.110.76.197:2181) org.apache.zookeeper.ClientCnxn - Reading reply sessionid:0x10014dd871c000a, packet:: clientPath:null serverPath:null finished:false header:: 10,8  replyHeader:: 10,102,0  request:: '/hbase,F  response:: v{'replication,'meta-region-server,'rs,'splitWAL,'backup-masters,'table-lock,'flush-table-proc,'region-in-transition,'online-snapshot,'master,'switch,'running,'recovering-regions,'draining,'namespace,'hbaseid,'table} 
+DEBUG main-SendThread(47.110.76.197:2181) org.apache.zookeeper.ClientCnxn - Reading reply sessionid:0x10014dd871c000a, packet:: clientPath:null serverPath:null finished:false header:: 11,4  replyHeader:: 11,102,0  request:: '/hbase/meta-region-server,F  response:: #ffffffff0001a726567696f6e7365727665723a3136303230ffffffc81e1fffffffccfffffff2ffffff8b7fffffffe250425546a23a17697a627031646e61393179637a64326d773369777a627a10ffffff947d18ffffffa7ffffffaeffffffd5ffffffcdffffffee2d100183,s{50,50,1575879017930,1575879017930,0,0,0,0,76,0,50} 
+DEBUG main-SendThread(47.110.76.197:2181) org.apache.zookeeper.ClientCnxn - Reading reply sessionid:0x10014dd871c000a, packet:: clientPath:null serverPath:null finished:false header:: 12,8  replyHeader:: 12,102,0  request:: '/hbase,F  response:: v{'replication,'meta-region-server,'rs,'splitWAL,'backup-masters,'table-lock,'flush-table-proc,'region-in-transition,'online-snapshot,'master,'switch,'running,'recovering-regions,'draining,'namespace,'hbaseid,'table} 
+DEBUG main-SendThread(47.110.76.197:2181) org.apache.zookeeper.ClientCnxn - Reading reply sessionid:0x10014dd871c000a, packet:: clientPath:null serverPath:null finished:false header:: 13,4  replyHeader:: 13,102,0  request:: '/hbase/meta-region-server,F  response:: #ffffffff0001a726567696f6e7365727665723a3136303230ffffffc81e1fffffffccfffffff2ffffff8b7fffffffe250425546a23a17697a627031646e61393179637a64326d773369777a627a10ffffff947d18ffffffa7ffffffaeffffffd5ffffffcdffffffee2d100183,s{50,50,1575879017930,1575879017930,0,0,0,0,76,0,50} 
+DEBUG main-SendThread(47.110.76.197:2181) org.apache.zookeeper.ClientCnxn - Reading reply sessionid:0x10014dd871c000a, packet:: clientPath:null serverPath:null finished:false header:: 14,8  replyHeader:: 14,102,0  request:: '/hbase,F  response:: v{'replication,'meta-region-server,'rs,'splitWAL,'backup-masters,'table-lock,'flush-table-proc,'region-in-transition,'online-snapshot,'master,'switch,'running,'recovering-regions,'draining,'namespace,'hbaseid,'table} 
